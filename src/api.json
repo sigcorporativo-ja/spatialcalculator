@@ -1,0 +1,34 @@
+{
+  "url": {
+    "name": "SpatialCalculator",
+    "separator": "*"
+  },
+  "constructor": "M.plugin.SpatialCalculator",
+  "parameters": [{
+    "type": "object",
+    "properties": [{
+      "type": "enum",
+      "name": "position",
+      "possibleValues": ["TR", "TL", "BL", "BR"],
+      "position": 0
+    }]
+  }],
+  "files": {
+    "ol": {
+      "scripts": ["spatialcalculator.ol.min.js"],
+      "styles": ["spatialcalculator.ol.min.css"]
+    }
+  },
+  "metadata": {
+    "name": "SpatialCalculator",
+    "description": "Cambio de coordenadas",
+    "text": "Cambia unas coordenadas entre sistemas de referencia (también acepta coordenadas geográficas).",
+    "version": "1.0.0",
+    "date": "Junio, 2020",
+    "author": "",
+    "org": "Consejería de Hacienda, Industria y Energía. Junta de Andalucía.",
+    "tags": "mapea,plugin",
+    "icon": "./facade/assets/icons/icons.svg",
+    "centralized": true
+  }
+}

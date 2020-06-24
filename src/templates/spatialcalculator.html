@@ -1,0 +1,77 @@
+<div class="m-control m-spatialcalculator-container">
+    <div class="m-spatialcalculator-panel">
+        <div class="title">
+            Calculadora espacial
+        </div>
+        <div class="m-spatialcalculator-datas">
+            <div>
+                <span>Origen:</span>
+                <select name="srs" id="m-spatialcalculator-srs">
+
+                    <option value="EPSG:3857">WGS84 (EPSG:3857)</option>
+                    <!--Geográficas-->
+                    <option value="EPSG:4326">WGS84 (EPSG:4326)</option>
+                    <option value="EPSG:4230">ED50 (EPSG:4230)</option>
+                    <option value="EPSG:4258">ETRS89 (EPSG:4258)</option>
+                    <!--ED50 UTM-->
+                    <option value="EPSG:23028">ED50/UTM huso 28 (EPSG:23028)</option>
+                    <option value="EPSG:23029">ED50/UTM huso 29 (EPSG:23029)</option>
+                    <option value="EPSG:23030">ED50/UTM huso 30 (EPSG:23030)</option>
+                    <option value="EPSG:23031">ED50/UTM huso 31 (EPSG:23031)</option>
+                    <!--ETRS89 UTM-->
+                    <option value="EPSG:25828">ETRS89/UTM huso 28 (EPSG:25828)</option>
+                    <option value="EPSG:25829">ETRS89/UTM huso 29 (EPSG:25829)</option>
+                    <option value="EPSG:25830">ETRS89/UTM huso 30 (EPSG:25830)</option>
+                    <option value="EPSG:25831">ETRS89/UTM huso 31 (EPSG:25831)</option>
+
+                </select>
+            </div>
+            <div>
+                <span>Destino:</span>
+                <select name="srs" id="m-spatialcalculator-srs-target">
+
+                    <option value="EPSG:3857">WGS84 (EPSG:3857)</option>
+                    <!--Geográficas-->
+                    <option value="EPSG:4326">WGS84 (EPSG:4326)</option>
+                    <option value="EPSG:4230">ED50 (EPSG:4230)</option>
+                    <option value="EPSG:4258">ETRS89 (EPSG:4258)</option>
+                    <!--ED50 UTM-->
+                    <option value="EPSG:23028">ED50/UTM huso 28 (EPSG:23028)</option>
+                    <option value="EPSG:23029">ED50/UTM huso 29 (EPSG:23029)</option>
+                    <option value="EPSG:23030">ED50/UTM huso 30 (EPSG:23030)</option>
+                    <option value="EPSG:23031">ED50/UTM huso 31 (EPSG:23031)</option>
+                    <!--ETRS89 UTM-->
+                    <option value="EPSG:25828">ETRS89/UTM huso 28 (EPSG:25828)</option>
+                    <option value="EPSG:25829">ETRS89/UTM huso 29 (EPSG:25829)</option>
+                    <option value="EPSG:25830">ETRS89/UTM huso 30 (EPSG:25830)</option>
+                    <option value="EPSG:25831">ETRS89/UTM huso 31 (EPSG:25831)</option>
+                </select>
+            </div>
+            <div id="m-spatialcalculator-utm">
+                <span>UTM-X:</span>
+                <input type="number" name="UTM-X" id="UTM-X" placeholder="234596.23">
+                <span>UTM-Y:</span>
+                <input type="number" name="UTM-Y" id="UTM-Y" placeholder="4142261.27">
+            </div>
+            <div id="m-spatialcalculator-latlon" style="display:none;">
+                <span>LON:</span>
+                <input type="text" name="LON" id="LON" placeholder="-5.59479">
+                <span>LAT:</span>
+                <input type="text" name="LAT" id="LAT" placeholder="37.3895">
+            </div>
+        </div>
+        <div class="button">
+            <button class="represent" id="m-spatialcalculator-clean" title="Copiar al portapapeles">
+                <i class="g-cartografia-papelera"></i> Limpiar
+            </button>
+            <button class="represent" id="m-spatialcalculator-calculate">
+                <i class="g-cartografia-posicion3"></i> Calcular
+            </button>
+        </div>
+    </div>
+    <div class="m-spatialcalculator-panel panel-codigo">
+        <div class="title" id="resultado">Resultado</div>
+        <div id="m-spatialcalculator-result">
+        </div>
+    </div>
+</div>
