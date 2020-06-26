@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="mapea" content="yes">
     <title>SpatialCalculator TEST</title>
-    <link href="http://sigc-dev.desarrollo.guadaltel.es/mapea5/assets/css/mapea-5.1.0.ol.min.css" rel="stylesheet" />
+    <link href="http://sigc-dev.desarrollo.guadaltel.es/mapea5/assets/css/mapea-5.2.0.ol.min.css" rel="stylesheet" />
+    <link href="../dist/spatialcalculator.ol.min.css" rel="stylesheet" />
     <style rel="stylesheet">
         html,
         body {
@@ -22,10 +23,19 @@
 
 <body>
     <div id="mapjs" class="container"></div>
-    <script type="text/javascript" src="http://sigc-dev.desarrollo.guadaltel.es/mapea5/js/mapea-5.1.0.ol.min.js"></script>
-    <script type="text/javascript" src="http://sigc-dev.desarrollo.guadaltel.es/mapea5/js/configuration-5.1.0.js"></script>
-    <script type="text/javascript" src="/main.js"></script>
+    <script type="text/javascript" src="http://sigc-dev.desarrollo.guadaltel.es/mapea5/js/mapea-5.2.0.ol.min.js"></script>
+    <script type="text/javascript" src="http://sigc-dev.desarrollo.guadaltel.es/mapea5/js/configuration-5.2.0.js"></script>
+    <script type="text/javascript" src="../dist/spatialcalculator.ol.min.js"></script>
+    <script type="text/javascript">
+        const map = M.map({
+            container: 'mapjs'
+        });
 
+        const mp = new M.plugin.SpatialCalculator({
+            position: 'TL',    
+        });
+        map.addPlugin(mp);
+    </script>
 </body>
 
 </html>

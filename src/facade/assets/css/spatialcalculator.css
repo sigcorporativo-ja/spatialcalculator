@@ -10,31 +10,6 @@
        GENERAL
 *********************/
 
-.m-spatialcalculator-container {
-    position: absolute;
-    top: 0.5em;
-    right: 0.5em;
-    text-align: left;
-    overflow-y: auto !important;
-    width: 100%;
-    overflow: auto;
-    z-index: 999 !important;
-}
-
-#m-spatialcalculator-limpiar {
-    float: right;
-}
-
-.m-areas>div.m-area>div.m-panel.m-spatialcalculator.opened {
-    width: 27vw;
-}
-
-@media only screen and (min-width: 769px) {
-    .m-spatialcalculator-container {
-        min-width: 340px;
-    }
-}
-
 /*********************
      TITLES
 *********************/
@@ -51,33 +26,27 @@
      COLUMN & CONTENT COLUMN
 *********************/
 div.m-spatialcalculator-container>div.m-spatialcalculator-panel>.m-spatialcalculator-datas>div>span {
-    width: 17%;
-    display: inline-block;
-}
+    width: auto;
 
-div.m-spatialcalculator-container>div.m-spatialcalculator-panel>.m-spatialcalculator-datas>div>select {
-    display: -webkit-inline-box !important;
-    width: 75%;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    padding: 2px 0px 3px 5px;
-    box-shadow: 1px 1px 3px 0px #999;
+display: block;
 }
 
 div.m-spatialcalculator-container>div.m-spatialcalculator-panel>.m-spatialcalculator-datas>div>input {
-    width: 63%;
+    width: 100%;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     padding: 2px 0px 3px 5px;
     background-color: #fdfdfd;
-    box-shadow: 1px 1px 3px 0px #999;
     border-radius: 0px;
     margin: 0px;
 }
 
-@media only screen and (max-width: 768px) {
+div.m-spatialcalculator-container > div.m-spatialcalculator-panel > .m-spatialcalculator-datas > div > input::placeholder {
+    color: #2f2f2f4a;
+}
+
+@media only screen and (max-width: 468px) {
     div.m-spatialcalculator-container>div.m-spatialcalculator-panel>.m-spatialcalculator-datas>div>input {
         width: 97%;
         margin-top: 3%;
@@ -86,9 +55,9 @@ div.m-spatialcalculator-container>div.m-spatialcalculator-panel>.m-spatialcalcul
 
 
 div.m-spatialcalculator-container>div.m-spatialcalculator-panel>.m-spatialcalculator-datas {
-    width: 92%;
-    padding-left: 4%;
-    padding-right: 4%;
+    width: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 div.m-spatialcalculator-container>div.m-spatialcalculator-panel>.m-spatialcalculator-datas>div {
@@ -97,48 +66,13 @@ div.m-spatialcalculator-container>div.m-spatialcalculator-panel>.m-spatialcalcul
 }
 
 /****************************
-     FIREFOX HACKS
-****************************/
-
-@-moz-document url-prefix() {
-    div.m-spatialcalculator-container>div.m-spatialcalculator-panel>.m-spatialcalculator-datas>div>select {
-        border: 1px solid rgb(167, 160, 160);
-        padding: 1px 1px 2px 3px;
-    }
-
-    div.m-spatialcalculator-container>div.m-spatialcalculator-panel>.m-spatialcalculator-datas>div>span {
-        width: 33%;
-        display: inline-block;
-    }
-
-}
-
-/****************************
      IE HACK
 ****************************/
-
-@media all and (-ms-high-contrast: none),
-(-ms-high-contrast: active) {
-    div.m-spatialcalculator-container>div.m-spatialcalculator-panel>.m-spatialcalculator-datas>div>select::-ms-expand {
-        display: none;
-    }
-
-    div.m-spatialcalculator-container>div.m-spatialcalculator-panel>.m-spatialcalculator-datas>div>select {
-        border: 1px solid rgb(167, 160, 160);
-    }
-}
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 468px) {
     div.m-spatialcalculator-container>div.m-spatialcalculator-panel>.m-spatialcalculator-datas>div>span {
         display: block;
         width: 100%;
         margin-top: 1rem;
-    }
-
-    div.m-spatialcalculator-container>div.m-spatialcalculator-panel>.m-spatialcalculator-datas>div>select {
-        display: block;
-        width: 100%;
-        margin-top: 3%;
     }
 }
 
@@ -224,7 +158,6 @@ div.m-spatialcalculator-container>div.m-spatialcalculator-panel>div.button {
 
 
 .m-spatialcalculator-container .m-spatialcalculator-panel {
-    margin: 0 10px 0 10px;
     top: 0px;
     right: 0px;
     max-height: 100%;
@@ -232,7 +165,7 @@ div.m-spatialcalculator-container>div.m-spatialcalculator-panel>div.button {
     background-color: #fffbfb;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 468px) {
     .m-areas>div.m-area>div.m-panel.m-spatialcalculator.opened {
         margin-left: 0;
         width: 100vw;
