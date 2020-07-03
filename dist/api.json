@@ -1,6 +1,6 @@
 {
   "url": {
-    "name": "SpatialCalculator",
+    "name": "spatialCalculator",
     "separator": "*"
   },
   "constructor": "M.plugin.SpatialCalculator",

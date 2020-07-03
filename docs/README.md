@@ -25,11 +25,6 @@ Transforma coordenadas de un sistema de referencia a otro aceptando también sis
   - 'BL':bottom left
   - 'BR':bottom right
 
-
-## Eventos
-
-## Otros métodos
-
 ## Ejemplos de uso
 
 ### Ejemplo 1
